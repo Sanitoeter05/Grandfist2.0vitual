@@ -8,7 +8,7 @@ api_key = 'AIzaSyAw5WFwcp2I8Y9AVsujc916vDBigUi3IRk'
 if __name__ == '__main__':
     gfSdk = GrandfistSdk(file)
 
-    gfSdk.startup()
+    gfSdk.Loading()
     gfSdk.welcomeMessage()
 
     while True:
@@ -57,6 +57,9 @@ if __name__ == '__main__':
 
         elif "Kallender" in statement:
             gfSdk.callender()
+
+        elif "erzähle mir einen witz" in statement or "Ich brauch einen witz" in statement:
+            gfSdk.Joking()
 
         if 'auf wiedersehen' in statement:
             gfSdk.good_bye(file)
